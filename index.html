@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game - Udacity Challenge</title>
+    <meta name="description" content="Memory Game / Matching Game for Udacity">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+
+        <section class="scorePanel">
+            <div>
+            Stars Rating<ul class="stars">
+                <li><i class="fa fa-star one"></i></li>
+                <li><i class="fa fa-star two"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                </ul>
+            </div>
+            <div>Moves <span class="moves">0</span></div>
+            <div>Timer <span id="timer"></span></div>
+            <div class="menuRestart">Restart Game?
+                <i class="fa fa-repeat"></i>
+            </div>
+        </section>
+        <ul class="deck"></ul>
+    </div>
+
+ <div id="Modal" class="winner-modal">
+            <h3>Congratulations!!</h3>
+            <p>Final Stars: <span class="starRating"></span></p>
+            <p>Final Time: <span id="finalTime"> </span></p>
+            <p>Final Moves: <span id=finalMove> </span></p>
+            <div class="modalRestart">Play Again?
+                <i class="fa fa-repeat"></i>
+            </div>
+    </div>
+    <section>
+        <footer>
+            <p>by Anita Denunzio</p>
+            <p>Google/Udacity FEND Nanodegree</p>
+        </footer>
+    </section>
+    <script src="js/app.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script> 
+    <script src="js/ez.countimer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+</body>
+</html>
