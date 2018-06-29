@@ -16,8 +16,8 @@ let openedCards = [];
 let matCards = [];
 const cardsContainer = document.querySelector('.deck');
 const endModal = document.getElementById("Modal");
-const menuRestartBut = document.querySelector('.menuRestart');
-const modalRestartBut = document.querySelector('.modalRestart');  // Restart the Game
+const menuRestartBtn = document.querySelector('.menuRestart');
+const modalRestartBtn = document.querySelector('.modalRestart');  // Restart the Game
 let moveCounter = document.querySelector('.moves'); // keep score of moves
 let moves = 0;
 let stars = document.querySelector('.stars');
@@ -97,10 +97,10 @@ function compare(curCard, prevCard) {
       openedCards = [];
     } else {
       setTimeout(function() {
-        curCard.classList.remove("open", "show", "disabled");
-        prevCard.classList.remove("open", "show", "disabled");
+        curCard.classList.remove("open", "show", "disabled", "selected-card");
+        prevCard.classList.remove("open", "show", "disabled", "selected-card");
         openedCards = [];
-      }, 100);
+      }, 1000);
     }
     addMove();
 
@@ -133,7 +133,6 @@ function shuffle(array) {
     return array;
 }
 // function check if game is over
-
 function isOver() {
     if(matCards.length === pieces.length) {
         $('.timer').countimer('stop');
@@ -156,11 +155,11 @@ function hideModal() {
     }
 
 // Restart the Game
-    menuRestartBut.addEventListener("click", function() {
+    menuRestartBtn.addEventListener("click", function() {  // Restart Game button top menu
         resetGame ();
     });
 
-    modalRestartBut.addEventListener("click", function() {
+    modalRestartBtn.addEventListener("click", function() {  // Restart button modal
         resetGame ();
     });
 
